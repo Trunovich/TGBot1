@@ -11,7 +11,7 @@ def welcome_message (message):
 
     markup = telebot.types.InlineKeyboardMarkup()
     btn1 = telebot.types.InlineKeyboardButton('изображение', callback_data='image')
-    btn2 = telebot.types.InlineKeyboardButton('Мой гитхаб)', url ='https://github.com/Trunovich')
+    btn2 = telebot.types.InlineKeyboardButton('Мой гитхаб', url ='https://github.com/Trunovich')
     btn3 = telebot.types.InlineKeyboardButton('сообщенние', callback_data='sms')
     markup.row(btn1)
     markup.row(btn3, btn2)
