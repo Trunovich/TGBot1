@@ -22,7 +22,7 @@ def welcome_message (message):
 @bot.callback_query_handler(func=lambda callback: True)  #обработка нажатия кнопок в стартовом сообщении
 def callback(callback):
     if callback.data == 'image':
-        bot.send_photo(callback.message.chat.id, open('image.png', 'rb'))
+        bot.send_photo(callback.message.chat.id, open('reflection-of-snowy-mountains-cloudy-sky-and-trees-in-lake-water-wallpaper-5120x3200_10.jpg', 'rb'))
     if callback.data == 'sms':
         bot.send_message(callback.message.chat.id,'необходимое сообщение')
     bot.answer_callback_query(callback.id)
