@@ -7,7 +7,7 @@ bot = telebot.TeleBot(API_TOKEN)
 
 
 @bot.message_handler(commands=['start'])   #комманда для стартого сообщенеия с кнопками
-def welcome_massage (message):
+def welcome_message (message):
 
     markup = telebot.types.InlineKeyboardMarkup()
     btn1 = telebot.types.InlineKeyboardButton('изображение', callback_data='image')
@@ -28,7 +28,7 @@ def callback(callback):
     bot.answer_callback_query(callback.id)
 
 @bot.message_handler(commands=['help'])
-def help_massage (message):
+def help_message (message):
     bot.reply_to(message, 'Текст помощи в нем можно оставить ссылку на тех поддержку')
 
 @bot.message_handler()
